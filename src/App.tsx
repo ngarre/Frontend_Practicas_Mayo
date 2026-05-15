@@ -16,6 +16,7 @@ import AdminItemsPage from "./pages/admin/AdminItemsPage.tsx";
 import EditProductPage from "./pages/admin/EditProductPage";
 import CreateProductPage from "./pages/admin/CreateProductPage";
 import ProfilePage from "./pages/ProfilePage";
+import OrdersPage from "./pages/OrdersPage";
 
 
 
@@ -49,6 +50,15 @@ function App() {
                   element={
                     <ProtectedRoute>
                       <CartPage />
+                    </ProtectedRoute>
+                  }
+                />
+
+                <Route
+                  path="/orders"
+                  element={
+                    <ProtectedRoute>
+                      <OrdersPage />
                     </ProtectedRoute>
                   }
                 />
