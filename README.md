@@ -61,7 +61,7 @@ Los administradores tienen acceso a un panel privado desde el que pueden consult
 
 ### Captura de catálogo
 
-![Products screenshot]![Products screenshot](./docs/images/products-screenshot.png)
+![Products screenshot](./docs/images/products-screenshot.png)
 
 ### Captura de carrito
 
