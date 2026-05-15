@@ -15,6 +15,7 @@ import AdminHomePage from "./pages/admin/AdminHomePage";
 import AdminItemsPage from "./pages/admin/AdminItemsPage.tsx";
 import EditProductPage from "./pages/admin/EditProductPage";
 import CreateProductPage from "./pages/admin/CreateProductPage";
+import ProfilePage from "./pages/ProfilePage";
 
 
 
@@ -33,6 +34,15 @@ function App() {
                 <Route path="/products/:id" element={<ProductDetailPage />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<RegisterPage />} />
+
+                <Route
+                  path="/profile"
+                  element={
+                    <ProtectedRoute>
+                      <ProfilePage />
+                    </ProtectedRoute>
+                  }
+                />
 
                 <Route
                   path="/cart"
@@ -71,22 +81,22 @@ function App() {
               </Routes>
 
               <Route
-                  path="/admin/items/new"
-                  element={
-                    <ProtectedRoute allowedRoles={["ROLE_ADMIN"]}>
-                      <CreateProductPage />
-                    </ProtectedRoute>
-                  }
-                />
+                path="/admin/items/new"
+                element={
+                  <ProtectedRoute allowedRoles={["ROLE_ADMIN"]}>
+                    <CreateProductPage />
+                  </ProtectedRoute>
+                }
+              />
 
-               <Route
-                  path="/admin/items/:id/edit"
-                  element={
-                    <ProtectedRoute allowedRoles={["ROLE_ADMIN"]}>
-                      <EditProductPage />
-                    </ProtectedRoute>
-                  }
-                />
+              <Route
+                path="/admin/items/:id/edit"
+                element={
+                  <ProtectedRoute allowedRoles={["ROLE_ADMIN"]}>
+                    <EditProductPage />
+                  </ProtectedRoute>
+                }
+              />
             </div>
 
             <Footer />
