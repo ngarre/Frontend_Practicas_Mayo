@@ -1,0 +1,209 @@
+.dashboard-message {
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  color: var(--color-muted);
+  box-shadow: var(--shadow-soft);
+}
+
+.dashboard-message--error {
+  color: #9b3b35;
+  background: #fff1ee;
+}
+
+.dashboard-summary {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+}
+
+.dashboard-summary article {
+  border-radius: 28px;
+  padding: 24px;
+  background:
+    linear-gradient(160deg, rgba(255, 253, 248, 0.98), rgba(247, 216, 209, 0.28)),
+    var(--color-white);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(122, 143, 99, 0.14);
+}
+
+.dashboard-summary span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--color-muted);
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.dashboard-summary strong {
+  color: var(--color-sage-dark);
+  font-size: 2.1rem;
+  letter-spacing: -0.06em;
+}
+
+.dashboard-controls {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) 220px auto;
+  gap: 16px;
+  align-items: end;
+  border-radius: 28px;
+  padding: 22px;
+  background: var(--color-white);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(122, 143, 99, 0.14);
+}
+
+.dashboard-control {
+  display: grid;
+  gap: 8px;
+}
+
+.dashboard-control label,
+.dashboard-checkbox {
+  color: var(--color-cocoa);
+  font-weight: 800;
+}
+
+.dashboard-control input,
+.dashboard-control select {
+  width: 100%;
+  border: 1px solid rgba(122, 143, 99, 0.22);
+  border-radius: 16px;
+  padding: 12px 14px;
+  background: var(--color-white);
+  color: var(--color-text);
+  outline: none;
+}
+
+.dashboard-control input:focus,
+.dashboard-control select:focus {
+  border-color: var(--color-sage);
+  box-shadow: 0 0 0 4px rgba(122, 143, 99, 0.12);
+}
+
+.dashboard-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 12px;
+}
+
+.dashboard-checkbox input {
+  width: 18px;
+  height: 18px;
+}
+
+.dashboard-table-wrapper {
+  margin-top: 24px;
+  overflow-x: auto;
+  border-radius: 28px;
+  background: var(--color-white);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(122, 143, 99, 0.14);
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(122, 143, 99, 0.12);
+}
+
+.dashboard-table th {
+  color: var(--color-cocoa);
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: rgba(251, 246, 238, 0.8);
+}
+
+.dashboard-table th button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.dashboard-table td {
+  color: var(--color-text);
+}
+
+.dashboard-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.dashboard-role {
+  width: fit-content;
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 7px 11px;
+  background: var(--color-blush-light);
+  color: var(--color-cocoa);
+  font-weight: 900;
+  font-size: 0.82rem;
+}
+
+.dashboard-delete-button {
+  border: 0;
+  border-radius: 999px;
+  padding: 9px 14px;
+  background: var(--color-blush-light);
+  color: var(--color-cocoa);
+  font-weight: 900;
+}
+
+.dashboard-delete-button:hover {
+  background: var(--color-blush);
+  color: var(--color-white);
+}
+
+.dashboard-empty {
+  margin-top: 24px;
+  border-radius: 30px;
+  padding: 34px;
+  background: var(--color-white);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(122, 143, 99, 0.14);
+  text-align: center;
+}
+
+.dashboard-empty__icon {
+  font-size: 3.5rem;
+  margin-bottom: 14px;
+}
+
+.dashboard-empty h2 {
+  margin: 0;
+  color: var(--color-sage-dark);
+}
+
+.dashboard-empty p {
+  margin: 12px auto 0;
+  color: var(--color-muted);
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+
+
+@media (max-width: 860px) {
+  .dashboard-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-checkbox {
+    padding-bottom: 0;
+  }
+}
