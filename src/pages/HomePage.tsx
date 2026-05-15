@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../components/ProductCard.tsx";
 import { getItems } from "../services/itemService";
 import type { Item } from "../types/item.types";
 import { motion } from "motion/react";
@@ -99,9 +99,7 @@ export default function HomePage() {
 
         {!loading && !error && (
           <div className="catalog__grid">
-            {items.map((item, index) => (
-              <ProductCard key={item.id} item={item} index={index} />
-            ))}
+            
           </div>
         )}
         {!loading && !error && (
