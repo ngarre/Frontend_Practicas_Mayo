@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { deleteCustomer, getCustomers } from "../../services/customerService";
-import type { Customer } from "../../types/customer.types";
+import { deleteCustomer, getCustomers } from "../../services/customerService.ts";
+import type { Customer } from "../../types/customer.types.ts";
 import "../ProtectedPages.css";
 import "./AdminDashboardPage.css";
 
