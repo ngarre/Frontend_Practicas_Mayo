@@ -32,7 +32,8 @@
 
 ## Descripción
 
-**Cozy Bites** es una aplicación frontend desarrollada con React y TypeScript para consumir una API REST de una tienda de comida saludable.
+**Cozy Bites** es una aplicación frontend desarrollada con React y TypeScript para consumir una API REST de una tienda de comida saludable →
+[API de Cozy Bites](https://github.com/Mig1881/Backend_Practicas_Mayo.git)
 
 La aplicación permite a los usuarios consultar productos, registrarse, iniciar sesión, añadir productos al carrito, realizar un checkout y consultar sus pedidos. Además, los usuarios pueden gestionar su perfil y subir una imagen de perfil mediante Cloudinary.
 
