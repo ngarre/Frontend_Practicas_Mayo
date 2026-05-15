@@ -57,24 +57,23 @@ Los administradores tienen acceso a un panel privado desde el que pueden consult
 
 ### Captura de Home
 
-![Home screenshot](docs\images\home-screenshot.png)
+![Home screenshot](./docs/images/home-screenshot.png)
 
 ### Captura de catálogo
 
-![Products screenshot](docs\images\products-screenshoot.png)
+![Products screenshot]![Products screenshot](./docs/images/products-screenshot.png)
 
 ### Captura de carrito
 
-![Cart screenshot](docs\images\cart-screenshot.png)
+![Cart screenshot](./docs/images/cart-screenshot.png)
 
 ### Captura de perfil
 
-![Profile screenshot](docs\images\profile-screenshot.png)
+![Profile screenshot](./docs/images/profile-screenshot.png)
 
 ### Captura de panel admin
 
-![Admin panel screenshot](docs\images\admin-user-dashboard.png)
-
+![Admin panel screenshot](./docs/images/admin-user-dashboard.png)
 
 
 ## Tecnologías utilizadas
