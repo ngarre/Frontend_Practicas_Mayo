@@ -59,6 +59,8 @@ export default function CartPage() {
                     src={`${API_URL}${cartItem.item.imageUrl}`}
                     alt={cartItem.item.name}
                     className="cart-item__image"
+                    loading="lazy"
+                    decoding="async"
                   />
                 ) : (
                   <div className="cart-item__placeholder">🥣</div>
