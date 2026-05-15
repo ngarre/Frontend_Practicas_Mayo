@@ -26,6 +26,8 @@
 - [Integración con Cloudinary](#integración-con-cloudinary)
 - [Dashboards y visualización de datos](#dashboards-y-visualización-de-datos)
 - [Diseño y experiencia visual](#diseño-y-experiencia-visual)
+- [Sostenibilidad y accesibilidad](#sostenibilidad-y-accesibilidad)
+- [Scripts disponibles](#scripts-disponibles)
 - [Autores](#autores)
 
 
