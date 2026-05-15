@@ -344,3 +344,9 @@
     display: none;
   }
 }
+
+.profile-form__help {
+  color: var(--color-muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}

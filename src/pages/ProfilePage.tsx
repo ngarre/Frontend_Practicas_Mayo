@@ -266,28 +266,40 @@ export default function ProfilePage() {
                                 type="file"
                                 accept="image/*"
                                 onChange={handleImageChange}
+                                aria-describedby="profileImageHelp"
                             />
 
                             {formData.profileImageUrl && (
                                 <button
                                     type="button"
                                     className="profile-form__remove-image"
+                                    aria-label="Remove profile image"
                                     onClick={handleRemoveImage}
                                 >
                                     Remove image
                                 </button>
                             )}
                         </div>
+
+                        <span id="profileImageHelp" className="profile-form__help">
+                            Upload a profile image using Cloudinary.
+                        </span>
                     </div>
 
-                    {error && <p className="profile-message profile-message--error">{error}</p>}
-
-                    {successMessage && (
-                        <p className="profile-message profile-message--success">
-                            {successMessage}
+                    {error && (
+                        <p className="profile-message profile-message--error" role="alert">
+                            {error}
                         </p>
                     )}
 
+                    {successMessage && (
+                        <p
+                            className="profile-message profile-message--success"
+                            aria-live="polite"
+                        >
+                            {successMessage}
+                        </p>
+                    )}
                     <div className="profile-form__actions">
                         <button className="profile-form__button" type="submit" disabled={saving}>
                             {saving ? "Saving..." : "Save changes"}
@@ -298,6 +310,7 @@ export default function ProfilePage() {
                             type="button"
                             onClick={handleDeleteAccount}
                             disabled={deletingAccount}
+                            aria-label="Delete my Cozy Bites account"
                         >
                             {deletingAccount ? "Deleting..." : "Delete account"}
                         </button>
@@ -307,7 +320,12 @@ export default function ProfilePage() {
                 <aside className="profile-preview">
                     <div className="profile-preview__image">
                         {formData.profileImageUrl ? (
-                            <img src={formData.profileImageUrl} alt="Profile" />
+                            <img
+                                src={formData.profileImageUrl}
+                                alt={`${formData.name || "User"} profile`}
+                                loading="lazy"
+                                decoding="async"
+                            />
                         ) : (
                             <span>👤</span>
                         )}
