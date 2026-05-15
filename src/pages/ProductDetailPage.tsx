@@ -62,7 +62,7 @@ export default function ProductDetailPage() {
   if (loading) {
     return (
       <main className="product-detail-page">
-        <p className="product-detail-message">Loading product...</p>
+        <p className="product-detail-message" aria-live="polite">Loading product...</p>
       </main>
     );
   }
@@ -70,7 +70,7 @@ export default function ProductDetailPage() {
   if (error || !item) {
     return (
       <main className="product-detail-page">
-        <p className="product-detail-message product-detail-message--error">
+        <p className="product-detail-message product-detail-message--error" role="alert">
           {error || "Product not found."}
         </p>
         <Link to="/products" className="product-detail-back">
@@ -98,6 +98,8 @@ export default function ProductDetailPage() {
               src={`${API_URL}${item.imageUrl}`}
               alt={item.name}
               className="product-detail__image"
+              loading="lazy"
+              decoding="async"
             />
           ) : (
             <div className="product-detail__placeholder">🥣</div>
@@ -133,6 +135,7 @@ export default function ProductDetailPage() {
           <button
             type="button"
             className="product-detail__button"
+            aria-label={`Add ${item.name} to cart`}
             onClick={handleAddToCart}
           >
             Add to cart
