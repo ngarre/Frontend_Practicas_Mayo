@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import { login as loginRequest, logout as logoutRequest } from "../services/authService";
+import { login as loginRequest, logout as logoutRequest } from "../services/authService.ts";
 import type { JwtResponse, LoginRequest, Role } from "../types/auth.types";
 
 interface AuthContextValue {

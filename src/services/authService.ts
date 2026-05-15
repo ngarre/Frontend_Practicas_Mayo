@@ -1,4 +1,4 @@
-import { apiFetch } from "../api/apiFetch";
+import { apiFetch } from "../api/apiFetch.ts";
 import type {
   JwtResponse,
   LoginRequest,
