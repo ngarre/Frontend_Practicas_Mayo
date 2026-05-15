@@ -4,6 +4,8 @@ import { CartProvider } from "./context/CartContext.tsx";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage.tsx";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 
 
@@ -18,6 +20,8 @@ function App() {
             <div className="app-content">
               <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/register" element={<RegisterPage />} />
               </Routes>
             </div>
 
