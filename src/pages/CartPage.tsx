@@ -87,6 +87,7 @@ export default function CartPage() {
 
                   <button
                     type="button"
+                    aria-label={`Increase quantity of ${cartItem.item.name}`}
                     onClick={() => increaseQuantity(cartItem.item.id)}
                   >
                     +
@@ -96,6 +97,7 @@ export default function CartPage() {
                 <button
                   type="button"
                   className="cart-item__remove"
+                  aria-label={`Remove ${cartItem.item.name} from cart`}
                   onClick={() => removeFromCart(cartItem.item.id)}
                 >
                   Remove
@@ -125,6 +127,7 @@ export default function CartPage() {
           <button
             type="button"
             className="cart-summary__clear"
+            aria-label="Clear all products from cart"
             onClick={clearCart}
           >
             Clear cart
