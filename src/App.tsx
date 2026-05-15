@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage.tsx";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
 
 
 
@@ -20,6 +21,7 @@ function App() {
             <div className="app-content">
               <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/products/:id" element={<ProductDetailPage />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<RegisterPage />} />
               </Routes>
