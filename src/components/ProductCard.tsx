@@ -50,9 +50,11 @@ export default function ProductCard({ item, index = 0 }: ProductCardProps) {
         <div className="product-card__image-wrapper">
           {item.imageUrl ? (
             <img
-              className="product-card__image"
               src={`${API_URL}${item.imageUrl}`}
               alt={item.name}
+              className="product-card__image"
+              loading="lazy"
+              decoding="async"
             />
           ) : (
             <div className="product-card__placeholder">🥣</div>

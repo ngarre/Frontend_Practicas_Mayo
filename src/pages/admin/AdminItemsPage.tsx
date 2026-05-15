@@ -196,10 +196,16 @@ export default function AdminItemsPage() {
         </>
       )}
 
-      {loading && <p className="admin-items-message">Loading products...</p>}
+      {loading && (
+        <p className="admin-items-message" aria-live="polite">
+          Loading products...
+        </p>
+      )}
 
       {error && (
-        <p className="admin-items-message admin-items-message--error">
+        <p className="admin-items-message admin-items-message--error"
+          role="alert"
+        >
           {error}
         </p>
       )}
@@ -222,6 +228,8 @@ export default function AdminItemsPage() {
                     src={`${API_URL}${item.imageUrl}`}
                     alt={item.name}
                     className="admin-product-card__image"
+                    loading="lazy"
+                    decoding="async"
                   />
                 ) : (
                   <div className="admin-product-card__placeholder">🥗</div>
@@ -245,6 +253,7 @@ export default function AdminItemsPage() {
                     <Link
                       to={`/admin/items/${item.id}/edit`}
                       className="admin-product-card__button admin-product-card__button--edit"
+                      aria-label={`Edit product ${item.name}`}
                     >
                       Edit
                     </Link>
@@ -252,6 +261,7 @@ export default function AdminItemsPage() {
                     <button
                       type="button"
                       className="admin-product-card__button admin-product-card__button--delete"
+                      aria-label={`Delete product ${item.name}`}
                       onClick={() => handleDelete(item.id)}
                     >
                       Delete

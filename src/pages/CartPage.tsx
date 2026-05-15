@@ -59,6 +59,8 @@ export default function CartPage() {
                     src={`${API_URL}${cartItem.item.imageUrl}`}
                     alt={cartItem.item.name}
                     className="cart-item__image"
+                    loading="lazy"
+                    decoding="async"
                   />
                 ) : (
                   <div className="cart-item__placeholder">🥣</div>
@@ -75,6 +77,7 @@ export default function CartPage() {
                 <div className="cart-item__quantity">
                   <button
                     type="button"
+                    aria-label={`Decrease quantity of ${cartItem.item.name}`}
                     onClick={() => decreaseQuantity(cartItem.item.id)}
                   >
                     −
@@ -84,6 +87,7 @@ export default function CartPage() {
 
                   <button
                     type="button"
+                    aria-label={`Increase quantity of ${cartItem.item.name}`}
                     onClick={() => increaseQuantity(cartItem.item.id)}
                   >
                     +
@@ -93,6 +97,7 @@ export default function CartPage() {
                 <button
                   type="button"
                   className="cart-item__remove"
+                  aria-label={`Remove ${cartItem.item.name} from cart`}
                   onClick={() => removeFromCart(cartItem.item.id)}
                 >
                   Remove
@@ -122,6 +127,7 @@ export default function CartPage() {
           <button
             type="button"
             className="cart-summary__clear"
+            aria-label="Clear all products from cart"
             onClick={clearCart}
           >
             Clear cart

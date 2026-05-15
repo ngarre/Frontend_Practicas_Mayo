@@ -26,6 +26,8 @@
 - [Integración con Cloudinary](#integración-con-cloudinary)
 - [Dashboards y visualización de datos](#dashboards-y-visualización-de-datos)
 - [Diseño y experiencia visual](#diseño-y-experiencia-visual)
+- [Sostenibilidad y accesibilidad](#sostenibilidad-y-accesibilidad)
+- [Scripts disponibles](#scripts-disponibles)
 - [Autores](#autores)
 
 
@@ -586,6 +588,24 @@ La identidad visual se apoya en:
 Healthy food · Cozy mood
 ```
 
+## Sostenibilidad y accesibilidad
+
+Se han aplicado mejoras sencillas para reducir carga visual, mejorar la accesibilidad y optimizar el consumo de recursos:
+
+- Se ha añadido soporte para `prefers-reduced-motion`, reduciendo animaciones cuando el usuario lo solicita desde la configuración de su sistema operativo o navegador.  
+  Esto permite que personas con sensibilidad al movimiento, mareos o preferencia por interfaces más estáticas puedan navegar con una experiencia más cómoda. Por ejemplo, si el usuario activa la opción **Reducir movimiento** en su dispositivo, la web disminuye automáticamente animaciones, transiciones y efectos decorativos.
+
+- Se ha añadido carga diferida (`loading="lazy"`) y decodificación asíncrona (`decoding="async"`) en imágenes de producto y vistas no críticas.  
+  De esta forma, las imágenes que no son necesarias de inmediato no se cargan al instante, reduciendo el trabajo inicial del navegador y mejorando el rendimiento.
+
+- Se ha mejorado la navegación por teclado mediante estilos globales de `:focus-visible`.  
+  Esto permite identificar visualmente qué elemento está seleccionado al navegar usando teclado.
+
+- Se han añadido atributos `aria-label` en botones de acción que pueden necesitar más contexto, como botones de eliminar, aumentar cantidad o reducir cantidad.
+
+- Se han añadido roles y `aria-live` en mensajes de error y éxito para mejorar la compatibilidad con lectores de pantalla.
+
+- Se mantiene una interfaz ligera basada en CSS propio, sin librerías visuales pesadas, lo que reduce dependencias y evita cargar recursos innecesarios.
 
 ## Scripts disponibles
 
