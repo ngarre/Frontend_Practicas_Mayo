@@ -77,6 +77,7 @@ export default function CartPage() {
                 <div className="cart-item__quantity">
                   <button
                     type="button"
+                    aria-label={`Decrease quantity of ${cartItem.item.name}`}
                     onClick={() => decreaseQuantity(cartItem.item.id)}
                   >
                     −
