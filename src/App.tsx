@@ -13,6 +13,8 @@ import CartPage from "./pages/CartPage";
 import AdminDashboardPage from "./pages/admin/AdminDashboardPage";
 import AdminHomePage from "./pages/admin/AdminHomePage";
 import AdminItemsPage from "./pages/admin/AdminItemsPage.tsx";
+import EditProductPage from "./pages/admin/EditProductPage";
+import CreateProductPage from "./pages/admin/CreateProductPage";
 
 
 
@@ -67,6 +69,24 @@ function App() {
                   }
                 />
               </Routes>
+
+              <Route
+                  path="/admin/items/new"
+                  element={
+                    <ProtectedRoute allowedRoles={["ROLE_ADMIN"]}>
+                      <CreateProductPage />
+                    </ProtectedRoute>
+                  }
+                />
+
+               <Route
+                  path="/admin/items/:id/edit"
+                  element={
+                    <ProtectedRoute allowedRoles={["ROLE_ADMIN"]}>
+                      <EditProductPage />
+                    </ProtectedRoute>
+                  }
+                />
             </div>
 
             <Footer />
