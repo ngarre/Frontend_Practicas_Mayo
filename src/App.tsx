@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage.tsx";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
+import ProductsPage from "./pages/ProductsPage";
 
 
 
@@ -21,6 +22,7 @@ function App() {
             <div className="app-content">
               <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/products" element={<ProductsPage />} />
                 <Route path="/products/:id" element={<ProductDetailPage />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<RegisterPage />} />
@@ -31,7 +33,6 @@ function App() {
           </div>
         </BrowserRouter>
       </CartProvider>
-
     </AuthProvider>
   );
 }
