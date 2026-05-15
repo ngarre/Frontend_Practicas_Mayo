@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { useCart } from "../context/CartContext";
 import "./Navbar.css";
 
 export default function Navbar() {
   const { email, isAuthenticated, hasRole, logout } = useAuth();
+  const { totalItems } = useCart();
 
   return (
     <header className="navbar">
@@ -62,6 +64,7 @@ export default function Navbar() {
 
               <Link to="/cart" className="navbar__cart">
                 Cart
+                {totalItems > 0 && <span>{totalItems}</span>}
               </Link>
 
               <button type="button" className="navbar__button" onClick={logout}>
